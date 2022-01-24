@@ -14,7 +14,7 @@ namespace ToDoAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        [HttpGet]//https://localhost:44351/api/User
+        [HttpGet]//https://localhost:5001/api/User
         public ActionResult GetUsers()
         {
             SQLite SQLite = new SQLite();
@@ -25,7 +25,7 @@ namespace ToDoAPI.Controllers
             return Ok(users);
         }
 
-        [HttpPost("{addusr}")]//https://localhost:44351/api/User/addusr
+        [HttpPost("{addusr}")]//https://localhost:5001/api/User/addusr
         public void NewUser(Users addusr)
         {
             SQLite SQLite = new SQLite();

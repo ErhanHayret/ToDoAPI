@@ -15,7 +15,7 @@ namespace ToDoAPI.Controllers
     [ApiController]
     public class ToDoController : ControllerBase
     {
-        [HttpGet("{id}")]//https://localhost:44351/api/ToDo/id
+        [HttpGet("{id}")]//https://localhost:5001/api/ToDo/id
         public ActionResult GetTodos(int id)
         {
             SQLite sqlite = new SQLite();
@@ -26,7 +26,7 @@ namespace ToDoAPI.Controllers
             return Ok(todos);
         }
 
-        [HttpPost] //https://localhost:44351/api/ToDo
+        [HttpPost] //https://localhost:5001/api/ToDo
         public void AddToDo([FromBody] ToDos todo)
         {
             SQLite sqlite = new SQLite();
@@ -35,7 +35,7 @@ namespace ToDoAPI.Controllers
             sqlite.CloseConnect(conn);
         }
 
-        [HttpPut]//https://localhost:44351/api/ToDo
+        [HttpPut]//https://localhost:5001/api/ToDo
         public void UpdateCompleted([FromBody] ToDos todo)
         {
             SQLite sqlite = new SQLite();
@@ -45,7 +45,7 @@ namespace ToDoAPI.Controllers
             sqlite.CloseConnect(conn);
         }
 
-        [HttpPut("{update}")]//https://localhost:44351/api/ToDo/update
+        [HttpPut("{update}")]//https://localhost:5001/api/ToDo/update
         public void UpdateToDo([FromBody] ToDos todo)
         {
             SQLite sqlite = new SQLite();
@@ -54,7 +54,7 @@ namespace ToDoAPI.Controllers
             sqlite.CloseConnect(conn);
         }
 
-        [HttpDelete("{id}")]//https://localhost:44351/api/ToDo/id
+        [HttpDelete("{id}")]//https://localhost:5001/api/ToDo/id
         public void DeleteToDo(int id)
         {
             SQLite sqlite = new SQLite();
