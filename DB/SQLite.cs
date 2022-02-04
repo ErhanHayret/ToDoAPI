@@ -12,7 +12,7 @@ namespace ToDoAPI.DB
         public SQLiteConnection CreateConnection()
         {
             // Create a new database connection:
-            string connstr = @"URI=file:C:\Users\erhan\source\repos\ToDoListWepAPI\DB\ToDoDb.db;Version=3";
+            string connstr = @"URI=file:C:\Users\erhan\source\repos\ToDoAPI\DB\ToDoDb.db;Version=3";//dizin belirtlmeli
             SQLiteConnection sqlite_conn = new SQLiteConnection(connstr);
             // Open the connection:
             try
